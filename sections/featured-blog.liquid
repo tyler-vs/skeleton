@@ -1,0 +1,133 @@
+{% comment %}
+sections/featured-blog.liquid
+{% endcomment %}
+
+<!-- Featured blog posts -->
+<!-- Featured blog posts -->
+<!-- Featured blog posts -->
+<section class="section featured-blog-posts">
+  <div class="container u-full-width u-max-full-width">
+    {% if section.settings.heading != blank %}
+    <div class="row">
+      <h2>Featured blog posts</h2>
+    </div>
+    {% endif %}
+    <div class="blog-posts row">
+      <div class="blog-post four columns">
+        <div class="blog-post__inner">
+          <img src="https://assets.codepen.io/307033/image.svg" alt="" class="blog-post__img u-max-full-width">
+          <h2 class="blog-post__title">Blog article #1</h2>
+          <p class="blog-post__excerpt">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deleniti, sit ab. Perferendis quas odio doloribus tempore ducimus, voluptates optio officia mollitia. Facilis, alias labore quibusdam temporibus cum deleniti ex amet?<button class="btn blog-post__read-more">Read more</button></p>
+        </div>
+      </div>
+      <div class="blog-post four columns">
+        <div class="blog-post__inner">
+          <img src="https://assets.codepen.io/307033/image.svg" alt="" class="blog-post__img u-max-full-width">
+          <h2 class="blog-post__title">Blog article #2</h2>
+          <p class="blog-post__excerpt">Nesciunt eos eligendi, quo esse iste incidunt praesentium officia ratione optio veritatis cumque ea doloremque dignissimos iusto quaerat minima odio? Perferendis, sunt? Hic in impedit exercitationem consequuntur doloremque libero ut.<button class="btn blog-post__read-more">Read more</button></p>
+        </div>
+      </div>
+      <div class="blog-post four columns">
+        <div class="blog-post__inner">
+          <img src="https://assets.codepen.io/307033/image.svg" alt="" class="blog-post__img u-max-full-width">
+          <h2 class="blog-post__title">Blog article #3</h2>
+          <p class="blog-post__excerpt">Et alias obcaecati corrupti nulla reprehenderit dicta consectetur illum atque numquam tempore neque quo eum molestias nemo praesentium asperiores, mollitia explicabo iusto? Ipsum aperiam repellat molestias esse. Necessitatibus, odit nihil!<button class="btn blog-post__read-more">Read more</button></p>
+        </div>
+      </div>
+      <div class="blog-post four columns">
+        <div class="blog-post__inner">
+          <img src="https://assets.codepen.io/307033/image.svg" alt="" class="blog-post__img u-max-full-width">
+          <h2 class="blog-post__title">Blog article #4</h2>
+          <p class="blog-post__excerpt">Optio, commodi inventore? Dolore optio voluptas accusantium, nesciunt assumenda nisi minus eius modi culpa quidem? Harum fuga nulla suscipit adipisci odio non maxime voluptas ratione consequuntur, illo magni nostrum doloribus?<button class="btn blog-post__read-more">Read more</button></p>
+        </div>
+      </div>
+      <div class="blog-post four columns">
+        <div class="blog-post__inner">
+          <img src="https://assets.codepen.io/307033/image.svg" alt="" class="blog-post__img u-max-full-width">
+          <h2 class="blog-post__title">Blog article #5</h2>
+          <p class="blog-post__excerpt">Quia neque recusandae sunt eligendi dicta fuga, explicabo quis voluptas repellendus accusantium labore ipsam dolore harum ut laboriosam, magni deserunt adipisci mollitia, porro tenetur voluptatum modi! Dolorum sequi vero facilis.<button class="btn blog-post__read-more">Read more</button></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Map -->
+<!-- Map -->
+<!-- Map -->
+<section class="section map">
+  <div class="container u-full-width u-max-full-width">
+    <div class="row">
+      <h2>Map Section</h2>
+    </div>
+    <div class="row">
+      <div class="eight columns bg-image">
+      </div>
+      <div class="four columns">
+        <div class="map__contact">
+          <h4>Contact us</h4>
+          <address>
+
+          </address>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Featured blog",
+  "class": "index-section",
+  "settings": [
+    {
+      "id": "blog",
+      "type": "blog",
+      "label": "Blog"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Blog posts"
+    },
+    {
+      "type": "range",
+      "id": "post_limit",
+      "min": 1,
+      "max": 10,
+      "step": 1,
+      "label": "Posts shown",
+      "default": 2
+    },
+    {
+      "type": "checkbox",
+      "id": "blog_layout_grid",
+      "label": "Layout as a grid",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "post_tags",
+      "label": "Show tags",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "show_author",
+      "label": "Show post author",
+      "default": true
+    }
+  ],
+  "presets": [
+    {
+      "name": "Blog posts",
+      "category": "Blog",
+      "settings": {
+        "blog": "News",
+        "post_limit": 3
+      }
+    }
+  ]
+}
+{% endschema %}
