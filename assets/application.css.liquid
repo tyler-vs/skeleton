@@ -1,2 +1,30 @@
-// Put your styles in this file.
-// Note: "@import" rules aren’t supported.
+/*!
+ * Skeleton Shopify Theme
+ * By: Tyler Van Schaick
+ */
+/*============================================================================
+  Resets
+==============================================================================*/
+*, :after, :before {
+  box-sizing: border-box;
+}
+
+/*============================================================================
+  Featured blog posts
+==============================================================================*/
+@supports (display: flex) {
+  .featured-blog-posts .blog-posts {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+.featured-blog-posts .blog-post.four.columns:nth-child(3n+1) {
+  margin-left: 0;
+}
+.featured-blog-posts .blog-post .blog-post__img {
+  background: #efefef;
+  border: 1px solid #ddd;
+}
+.featured-blog-posts .blog-post .blog-post__title {
+  font-size: 28px;
+}
