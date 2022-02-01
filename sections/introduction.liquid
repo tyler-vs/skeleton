@@ -1,0 +1,41 @@
+<!-- Introduction -->
+
+<section data-sr id="introduction" class="introduction u-full-width">
+  <div class="container">
+    <div class="row">
+      <div class="twelve columns">
+        <h3 class="separator">{{- section.settings.heading -}}</h3>
+        <h4>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</h4>
+      </div>
+    </div>
+  </div>
+</section>
+{% schema %}
+{
+  "name": "Introduction",
+  "class": "index-section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Introduction"
+    },
+    {
+      "type": "richtext",
+      "id": "text",
+      "label": "Text",
+      "default": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.</p>"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Introduction",
+      "category": "Text",
+      "settings": {
+        "heading": "Introduction"
+      }
+    }
+  ]
+}
+{% endschema %}
